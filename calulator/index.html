@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <img src="9022843.png" alt="">
+        <form action="" id="form">
+            <table>
+                <tr>
+                    <div class="dis1">
+                        <td>
+                            <input type="text" name="display" id="display" readonly>
+                            <input type="button" value="C" onclick="dis(form.display.value='')" class="clear">
+                        </td>
+                    </div>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="9" onclick="dis('9')" class="in-1">
+                        <input type="button" value="8" onclick="dis('8')" class="in-1">
+                        <input type="button" value="7" onclick="dis('7')" class="in-1">
+                        <input type="button" value="+" onclick="dis('+')" class="in-1">
+                    </td>
+                </tr>
+                <tr>
+                    <div class="dis3">
+                        <td>
+                            <input type="button" value="6" onclick="dis('6')" class="in-2">
+                            <input type="button" value="5" onclick="dis('5')" class="in-2">
+                            <input type="button" value="4" onclick="dis('4')" class="in-2">
+                            <input type="button" value="-" onclick="dis('-')" class="in-2">
+                        </td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="dis4">
+                        <td>
+                            <input type="button" value="3" onclick="dis('3')" class="in-3">
+                            <input type="button" value="2" onclick="dis('2')" class="in-3">
+                            <input type="button" value="1" onclick="dis('1')" class="in-3">
+                            <input type="button" value="X" onclick="dis('*')" class="in-3">
+                        </td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="dis5">
+                        <td>
+                            <input type="button" value="0" onclick="dis('0')" class="in-4">
+                            <input type="button" value="÷" onclick="dis('/')" class="in-4">
+                            <input type="button" value="." onclick="dis('.')" class="in-4">
+                            <input type="button" value="=" onclick="result()" class="in-4">
+                        </td>
+                    </div>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function dis(x) {
+            document.getElementById("display").value += x;
+        }
+        function result(re) {
+            form.display.value = eval(form.display.value);
+        }
+    </script>
+</body>
+
+</html>
